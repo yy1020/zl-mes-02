@@ -40,14 +40,17 @@
                 <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline no-footer">
                     <div class="row">
                         <div class="col-xs-6">
-                            <div class="dataTables_length" id="dynamic-table_length"><label>
-                                展示
+                            <div class="dataTables_length" id="dynamic-table_length">
+                            <label>
+                            	    展示
                                 <select id="pageSize" name="dynamic-table_length" aria-controls="dynamic-table" class="form-control input-sm">
                                     <option value="10">10</option>
                                     <option value="25">25</option>
                                     <option value="50">50</option>
                                     <option value="100">100</option>
-                                </select> 条记录 </label>
+                                </select> 
+                                	条记录 
+                            </label>
                             </div>
                         </div>
                     </div>

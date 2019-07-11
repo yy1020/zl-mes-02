@@ -37,12 +37,16 @@
 
 							<div class="col-xs-12">
 								<div class="dataTables_length" id="dynamic-table_length">
-									<label> 展示 <select id="pageSize"
-										name="dynamic-table_length" aria-controls="dynamic-table"
-										class="form-control input-sm">
+									<label> 
+										展示 
+										<select id="pageSize"
+												name="dynamic-table_length" aria-controls="dynamic-table"
+												class="form-control input-sm">
 											<option value="10">10</option>
-									</select> 条记录
-									</label> <input id="keyword" type="search" name="keyword"
+										</select> 
+										条记录
+									</label> 
+									<input id="keyword" type="search" name="keyword"
 										class="form-control input-sm" placeholder="关键词"
 										aria-controls="dynamic-table"> <label>
 										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是否启用 
