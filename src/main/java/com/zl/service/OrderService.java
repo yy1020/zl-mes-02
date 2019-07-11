@@ -12,8 +12,11 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
 import com.google.common.base.Preconditions;
+import com.zl.beans.PageQuery;
+import com.zl.beans.PageResult;
 import com.zl.dao.MesOrderCustomerMapper;
 import com.zl.dao.MesOrderMapper;
+import com.zl.dto.SearchOrderDto;
 import com.zl.exception.ParamException;
 import com.zl.exception.SysMineException;
 import com.zl.model.MesOrder;
@@ -170,7 +173,7 @@ public class OrderService {
 	// dto 用于自定义的与数据层交互的类 SearchOrderDto
 	// SearchOrderParam--SearchOrderVo
 
-	/*public Object searchPageList(SearchOrderParam param, PageQuery page) {
+	public Object searchPageList(SearchOrderParam param, PageQuery page) {
 		// 验证页码是否为空
 		BeanValidator.check(page);
 		// 将param中的字段传入dto进行数据层的交互
@@ -203,7 +206,7 @@ public class OrderService {
 		}
 
 		return PageResult.<MesOrder>builder().build();
-	}*/
+	}
 
 	///////////////////////////////////////////////////////////////////////////////////////////////
 	// 1 默认生成代码

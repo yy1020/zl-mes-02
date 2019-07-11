@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
+import com.zl.beans.PageQuery;
+import com.zl.beans.PageResult;
 import com.zl.common.JsonData;
 import com.zl.model.MesOrder;
 import com.zl.param.MesOrderVo;
@@ -42,12 +43,12 @@ public class MesOrderController {
 //		return JsonData.success();
 //	}
 	
-   /* @RequestMapping("/order.json")
+    @RequestMapping("/order.json")
     @ResponseBody
     public JsonData searchPage(SearchOrderParam param, PageQuery page) {
     	PageResult<MesOrder> pr=(PageResult<MesOrder>) orderService.searchPageList(param, page);
     	return JsonData.success(pr);
-    }*/
+    }
 	
 	//添加接收json数据的注解
 	@ResponseBody
