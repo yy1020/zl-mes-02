@@ -2,6 +2,14 @@ package com.zl.model;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+@ToString
+@Builder 
+@AllArgsConstructor
+@NoArgsConstructor
 public class MesPlan {
     private Integer id;
 
