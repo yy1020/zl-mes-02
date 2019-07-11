@@ -36,12 +36,12 @@ public class MesOrderController {
 	}
 	
 	//批量启动处理
-//	@ResponseBody
-//	@RequestMapping("/orderBatchStart.json")
-//	public JsonData orderBatchStart(String ids) {
-//		orderService.batchStart(ids);
-//		return JsonData.success();
-//	}
+	@ResponseBody
+	@RequestMapping("/orderBatchStart.json")
+	public JsonData orderBatchStart(String ids) {
+		orderService.batchStart(ids);
+		return JsonData.success();
+	}
 	
     @RequestMapping("/order.json")
     @ResponseBody

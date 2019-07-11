@@ -37,16 +37,16 @@ public class OrderService {
 	// 一开始就定义一个id生成器
 	private IdGenerator ig = new IdGenerator();
 
-//	public void batchStart(String ids) {
-//		// 144&143--order(id)
-//		if (ids != null && ids.length() > 0) {
-//			// 批量处理的sqlSession代理
-//			String[] idArray = ids.split("&");
-//			mesOrderCustomerMapper.batchStart(idArray);
-//			// 批量启动待执行计划
-//			//planService.startPlansByOrderIds(idArray);
-//		}
-//	}
+	public void batchStart(String ids) {
+		// 144&143--order(id)
+		if (ids != null && ids.length() > 0) {
+			// 批量处理的sqlSession代理
+			String[] idArray = ids.split("&");
+			mesOrderCustomerMapper.batchStart(idArray);
+			// 批量启动待执行计划
+			//planService.startPlansByOrderIds(idArray);
+		}
+	}
 
 	// 修改数据
 	public void update(MesOrderVo mesOrderVo) {
