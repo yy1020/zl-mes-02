@@ -20,5 +20,5 @@ public interface MesOrderCustomerMapper {
 
 	void batchStart(@Param("list")String[] idArray);
 
-	/*MesOrder selectByOrderId(@Param("orderid")String orderid);*/
+	MesOrder selectByOrderId(@Param("orderid")String orderid);
 }

@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
 
 import com.google.common.base.Preconditions;
+import com.zl.service.PlanService;
 import com.zl.beans.PageQuery;
 import com.zl.beans.PageResult;
 import com.zl.dao.MesOrderCustomerMapper;
@@ -33,6 +34,8 @@ public class OrderService {
 	private MesOrderCustomerMapper mesOrderCustomerMapper;
 	@Resource
 	private SqlSession sqlSession;
+	@Resource
+	private PlanService planService;
 
 	// 一开始就定义一个id生成器
 	private IdGenerator ig = new IdGenerator();
@@ -44,7 +47,7 @@ public class OrderService {
 			String[] idArray = ids.split("&");
 			mesOrderCustomerMapper.batchStart(idArray);
 			// 批量启动待执行计划
-			//planService.startPlansByOrderIds(idArray);
+			planService.startPlansByOrderIds(idArray);
 		}
 	}
 
@@ -140,9 +143,9 @@ public class OrderService {
 				mesOrder.setOrderOperateIp("127.0.0.1");
 				mesOrder.setOrderOperateTime(new Date());
 				// 批量添加未启动订单
-				/*if (mesOrder.getOrderStatus() == 1) {
+				if (mesOrder.getOrderStatus() == 1) {
 					planService.prePlan(mesOrder);
-				}*/
+				}
 				mesOrderBatchMapper.insertSelective(mesOrder);
 			} catch (Exception e) {
 				throw new SysMineException("创建过程有问题");

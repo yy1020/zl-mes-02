@@ -10,6 +10,7 @@ import com.zl.beans.PageQuery;
 import com.zl.beans.PageResult;
 import com.zl.common.JsonData;
 import com.zl.model.MesPlan;
+import com.zl.param.MesPlanVo;
 import com.zl.param.SearchPlanParam;
 import com.zl.service.PlanService;
 
@@ -25,10 +26,9 @@ public class MesPlanController {
 		return FPATH+"plan";
 	}
 	@RequestMapping("/planStarted.page")
-	public String planStartPage() {
+	public String planStartedPage() {
 		return FPATH+"planStarted";
 	}
-	
 	
 	//分页显示
     @RequestMapping("/plan.json")
@@ -36,5 +36,20 @@ public class MesPlanController {
     public JsonData searchPage(SearchPlanParam param, PageQuery page) {
     	PageResult<MesPlan> pr=(PageResult<MesPlan>) planService.searchPageList(param, page);
     	return JsonData.success(pr);
+    }
+    
+    //批量启动处理
+    @ResponseBody
+    @RequestMapping("/planBatchStart.json")
+    public JsonData planBatchStart(String ids) {
+    	planService.batchStartWithIds(ids);
+    	return JsonData.success();
+    }
+    
+    @ResponseBody
+    @RequestMapping("/update.json")
+    public JsonData updatePlan(MesPlanVo mesPlanVo) {
+    	planService.update(mesPlanVo);
+    	return JsonData.success();
     }
 }
