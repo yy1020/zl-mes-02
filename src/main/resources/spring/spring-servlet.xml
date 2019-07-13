@@ -19,7 +19,9 @@
     <mvc:resources location="/assets/" mapping="/assets/**"/>
     <mvc:resources location="/ztree/" mapping="/ztree/**"/>
     <mvc:resources location="/WEB-INF/views/order/" mapping="/order/**"/>
-    
+    <mvc:resources location="/WEB-INF/views/plan/" mapping="/plan/**"/>
+    <mvc:resources location="/WEB-INF/views/product/" mapping="/product/**"/>
+    <mvc:resources location="/WEB-INF/views/test/" mapping="/test/**"/>
 
 	
     <!-- 配置视图解析器 -->

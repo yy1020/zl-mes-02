@@ -11,6 +11,7 @@ import com.zl.service.TestService;
 @Controller
 @RequestMapping("/test")
 public class TestController {
+	private static String PATH="test/";
 	@Resource
 	private TestService testService;
 	
@@ -22,4 +23,10 @@ public class TestController {
 		testService.persist(test);
 		return "test";
 	}
+	@RequestMapping("test.page")
+	public String test1() {
+		
+		return PATH+"test";
+	}
+	
 }
