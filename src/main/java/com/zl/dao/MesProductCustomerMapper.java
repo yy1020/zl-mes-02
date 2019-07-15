@@ -10,7 +10,9 @@ import com.zl.dto.SearchProductDto;
 import com.zl.model.MesProduct;
 
 public interface MesProductCustomerMapper {
-
+	
+	Long getProductCount();
+	
 	int countBySearchDto(@Param("dto")SearchProductDto dto);
 
 	List<ProductDto> getPageListBySearchDto(@Param("dto")SearchProductDto dto,@Param("page")PageQuery page);
