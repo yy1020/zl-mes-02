@@ -58,6 +58,7 @@ public class ProductService {
 							.productImgid(productVo.getProductImgid())//
 							.productMaterialsource(productVo.getProductMaterialsource())//
 							.productStatus(productVo.getProductStatus())//
+							.productNo(productVo.getProductNo())//
 							.productRemark(productVo.getProductRemark()).build();
 					pd.setProductOperateIp("127.0.0.1");
 					pd.setProductOperateTime(new Date());
@@ -81,7 +82,7 @@ public class ProductService {
 			}
 			if (StringUtils.isNotBlank(param.getSearch_source())) {
 				dto.setSearch_source(param.getSearch_source());
-				;
+				
 			}
 			if (param.getSearch_status() != null) {
 				dto.setSearch_status(param.getSearch_status());

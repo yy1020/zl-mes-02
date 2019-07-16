@@ -64,6 +64,8 @@ public class ProductDto {
     private Date productOperateTime;
 
     private String productOperateIp;
+    
+    private String productNo;
 
 	
 }

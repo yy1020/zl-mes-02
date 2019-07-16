@@ -2,8 +2,7 @@ package com.zl.model;
 
 import java.util.Date;
 
-import com.zl.model.MesProduct;
-import com.zl.model.MesProduct.MesProductBuilder;
+import com.zl.model.MesOrder.MesOrderBuilder;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -51,6 +50,8 @@ public class MesProduct {
     private Date productOperateTime;
 
     private String productOperateIp;
+
+    private String productNo;
 
     public Integer getId() {
         return id;
@@ -203,4 +204,14 @@ public class MesProduct {
     public void setProductOperateIp(String productOperateIp) {
         this.productOperateIp = productOperateIp == null ? null : productOperateIp.trim();
     }
+
+    public String getProductNo() {
+        return productNo;
+    }
+
+    public void setProductNo(String productNo) {
+        this.productNo = productNo == null ? null : productNo.trim();
+    }
+
+	
 }

@@ -82,19 +82,29 @@
 										<option value="0">未启用</option>
 										<option value="1">启用</option>
 								</select></td>
+								<td><label for="productNo">炉号</label></td>
+								<td><input id="input-productNo" type="text"
+									name="productNo" value=""
+									class="text ui-widget-content ui-corner-all"></td>
+							<!-- 	 -->
+							</tr>
+							<tr>
 								<td><label for="productRemark">备注</label></td>
 								<td><input id="input-productRemark" type="text"
 									name="productRemark" value=""
-									class="text ui-widget-content ui-corner-all"></td>
-							</tr>
-							<tr>
+									class1="text ui-widget-content ui-corner-all"></td>
 								<td><label for="counts">批量生成个数</label></td>
 								<td><input id="input-counts" type="number" name="counts"
 									value="" class="text ui-widget-content ui-corner-all"></td>
+								
+							</tr>
+							
+							<tr>
 								<td><label for="submit">生成材料</label></td>
 								<td><input type="submit" value="点击按钮"
 									class="btn btn-info fa fa-check" /></td>
 							</tr>
+							
 						</table>
 					</form>
 				</div>

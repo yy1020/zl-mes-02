@@ -47,4 +47,6 @@ public class MesProductVo {
     private String productOperateIp;
     
     private Integer counts=1;
+    
+    private String productNo;
 }

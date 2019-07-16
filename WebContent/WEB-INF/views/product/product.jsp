@@ -92,6 +92,8 @@
 									<th tabindex="0" aria-controls="dynamic-table" rowspan="1"
 										colspan="1">父级自编号</th>
 									<th tabindex="0" aria-controls="dynamic-table" rowspan="1"
+										 colspan="1">炉号</th>
+									<th tabindex="0" aria-controls="dynamic-table" rowspan="1"
 										colspan="1">材料名称</th>
 									<th tabindex="0" aria-controls="dynamic-table" rowspan="1"
 										colspan="1">材料来源</th>
@@ -123,7 +125,7 @@
 			</div>
 		</div>
 	</div>
-	<%@ include file="productForm/productForm.jsp" %>
-	<%@ include file="productForm/productUpdateForm.jsp" %> 
+	<%-- <%@ include file="productForm/productForm.jsp" %>
+	<%@ include file="productForm/productUpdateForm.jsp" %>  --%>
 </body>
 </html>
