@@ -66,10 +66,17 @@ public class MesProductController {
 	}
 	
 	//材料批量到库
-		@RequestMapping("/productBatchStart.json")
-	    public String productBatchStart(String ids) {
-			productService.batchStart(ids);
-			return FPATH+"/product";
-	    }
+	@RequestMapping("/productBatchStart.json")
+	public String productBatchStart(String ids) {
+		productService.batchStart(ids);
+		return FPATH+"/product";
+   }
+	
+	//钢锭查询
+	@RequestMapping("/productIron.page")
+	public String productIconList() {
+		return FPATH+"/productIron";
+	}
+	
 	
 }
