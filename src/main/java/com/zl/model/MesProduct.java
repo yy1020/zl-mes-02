@@ -213,5 +213,6 @@ public class MesProduct {
         this.productNo = productNo == null ? null : productNo.trim();
     }
 
+
 	
 }

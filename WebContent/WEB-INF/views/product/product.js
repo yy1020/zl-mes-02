@@ -223,6 +223,7 @@ $(function() {
 								$("#input-productTargetweight2").val(targetOrder.productTargetweight);
 								$("#input-productIrontypeweight2").val(targetOrder.productIrontypeweight);
 								$("#input-productIrontype2").val(targetOrder.productIrontype);
+								$("#input-productNo2").val(targetOrder.productNo);
 								$("#input-productRemark2").val(targetOrder.productRemark);
 								$("#input-productRealweight2").val(targetOrder.productRealweight);
 								$("#input-productLeftweight2").val(targetOrder.productLeftweight);

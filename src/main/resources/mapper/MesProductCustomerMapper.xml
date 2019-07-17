@@ -133,6 +133,14 @@
   	<include refid="queryProductConditions"></include>
   </select>
   
+  
+  <select id="getProductCount" resultType="Long">
+  		SELECT
+  		COUNT(1)
+  		FROM
+  		mes_product
+  </select>
+  
   <!-- 分页-左连接 -->
   <select id="getPageListBySearchDto" parameterType="map" resultMap="BaseDtoResultMap">
   	select <include refid="Product_Base_Column_List"></include>,

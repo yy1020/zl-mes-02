@@ -50,5 +50,26 @@ public class MesProductController {
 	   	PageResult<ProductDto> pr=(PageResult<ProductDto>) productService.searchPageList(param, page);
 	    	return JsonData.success(pr);
 	}
+	
+	//更新材料功能
+	@RequestMapping("/update.json")
+	@ResponseBody
+	public JsonData update(MesProductVo productVo) {
+		productService.update(productVo);
+		return JsonData.success(true);
+	}
 		
+	//材料到库管理
+	@RequestMapping("/productCome.page")
+	public String productComePage() {
+		return FPATH+"/productCome";
+	}
+	
+	//材料批量到库
+		@RequestMapping("/productBatchStart.json")
+	    public String productBatchStart(String ids) {
+			productService.batchStart(ids);
+			return FPATH+"/product";
+	    }
+	
 }

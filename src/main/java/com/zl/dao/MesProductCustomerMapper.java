@@ -30,5 +30,7 @@ public interface MesProductCustomerMapper {
 	int childCounts(@Param("parentId")Integer parentId);
 
 	List<MesProduct> childs(@Param("parentId")Integer parentId);
+
+	Long getProductCount();
 	
 }
